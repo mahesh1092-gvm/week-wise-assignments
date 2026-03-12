@@ -1,0 +1,13 @@
+### steps to generate backend
+1.generate package.json file
+npm init -y
+
+2..create http server
+//install and import
+//install express module
+//npm install express
+
+3..create rest apis
+resourse based operations
+
+4.add middle wares

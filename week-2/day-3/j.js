@@ -1,0 +1,1 @@
+//map is used to pick individual property

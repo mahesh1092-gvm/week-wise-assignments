@@ -1,0 +1,50 @@
+//spread operator (create copies of arrays and objects)
+
+// let x=100;
+// //create copy
+// // for primitive // copy of reference (=)
+// let y=x;
+
+//for nonprimitive 
+//crate copy
+// let originalobj={a:10}
+// let copyobj={...originalobj}
+// //change original obj
+// originalobj.a=123
+// console.log(originalobj)
+// console.log(copyobj)
+
+//deep copy creation
+let person={
+    name:"mahesh",
+    age:20,
+    address:{
+        city:"hyd",
+        pin:454
+    }
+}
+// shallow copy
+// let copyperson={...person}
+//  person.name="mahi"
+//  person.address.city="chennai"
+//  console.log(person)
+//  console.log(copyperson)
+
+//deep copy
+// let copyperson=structuredClone(person)
+// person.name="mahi"
+//  person.address.city="chennai"
+//  console.log(person)
+//  console.log(copyperson)
+
+// add elements /properties while copying
+// let arr=[1,2,3]
+// let carr=[...arr,10]
+// console.log(arr)
+// console.log(carr)
+
+//merge 
+// let arr=[1,2,3]
+// let arr2=[4,5,6]
+// let merge=[...arr,...arr2]
+// console.log(merge)

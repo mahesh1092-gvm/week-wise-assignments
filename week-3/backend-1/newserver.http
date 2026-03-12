@@ -1,0 +1,31 @@
+# ### read all products
+# GET http://localhost:6301/product
+
+# ### read all products by brand
+# GET http://localhost:6301/product/gt
+
+# ###create new product
+# POST http://localhost:6301/product
+# Content-Type: application/json
+
+# {
+#     "productid":301,
+#     "name":"laptop",
+#     "brand":"gt",
+#     "price":20000
+# }
+
+# ### update a product
+# PUT http://localhost:6301/product
+# Content-Type: application/json
+
+# {
+#      "productid":30,
+#     "name":"laptop",
+#     "brand":"victus",
+#     "price":20000
+# }
+
+# ### delete a product by id
+# DELETE http://localhost:6301/product/302
+

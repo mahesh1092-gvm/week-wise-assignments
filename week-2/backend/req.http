@@ -1,0 +1,63 @@
+### read all users
+GET http://localhost:8074/user
+
+### read a user by id
+GET http://localhost:8074/user/301
+
+### create a new user
+POST http://localhost:8074/user
+Content-Type: application/json
+
+{
+    "id":3013,
+    "name":"mahi",
+    "age":19
+}
+
+### update a user
+PUT http://localhost:8074/user
+Content-Type: application/json
+
+{
+    "id":301,
+    "name":"mahesh",
+    "age":22
+}
+
+### delete a user by id
+DELETE http://localhost:8074/user/301
+
+
+
+
+### read all products
+GET http://localhost:8074/product
+
+### read all products by brand
+GET http://localhost:8074/product/ht
+
+###create new product
+POST http://localhost:8074/product
+Content-Type: application/json
+
+{
+    "productid":301,
+    "name":"laptop",
+    "brand":"ht",
+    "price":20000
+}
+
+### update a product
+PUT http://localhost:8074/product
+Content-Type: application/json
+
+{
+     "productid":301,
+    "name":"laptop",
+    "brand":"victus",
+    "price":20000
+}
+
+### delete a product by id
+DELETE http://localhost:8074/product/301
+
