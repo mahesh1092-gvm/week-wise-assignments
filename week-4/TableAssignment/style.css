@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+table,tr,td{
+    margin:auto;
+    border:3px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding:20px;
+    padding-top: 10px;
+    width: 500px;
+}
+table{
+    margin-top: 80px;
+}
+.sub{
+    text-align: left;
+}
