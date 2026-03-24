@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    width: 120px;
+    height: 100px;
+}
+nav{
+    background-color: rgb(234, 241, 241);
+}
+.nav{
+    margin-left: 30px;
+}
+.parent{
+    background-color: rgb(226, 29, 29);
+
+}
+.child1{
+    display: grid;
+    color: rgb(251, 243, 243);
+    height: 200px;
+    
+}
+.child1-1{
+    grid-row: 1;
+    grid-column: 1/2;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.child1-1{
+    gap: 20px;
+}
+.child1-2{
+    margin-top: 40px;
+    grid-row:1 ;
+    grid-column: 2/3;
+}
+.child2{
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.child2-1{
+    padding: 30px;
+    
+    background-color: brown;
+}
+.child2-2{
+    padding: 30px;
+    background-color: brown;
+}
+.child2-3{
+    padding: 30px;
+    background-color: brown;
+}

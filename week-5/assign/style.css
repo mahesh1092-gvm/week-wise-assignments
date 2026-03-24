@@ -1,0 +1,32 @@
+*{
+     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.total,table,tr,td{
+    padding:10px;
+    text-align: center;
+    border-collapse: collapse;
+max-width: 600x;
+margin: auto;
+
+}
+.row1{
+    color: white;
+    font-size: 20px;
+    background-color:#1b786a
+}
+.row2{
+    background-color: #5fc3ed;
+
+}
+.row4,.row6{
+    background-color: #d2f0f1;
+}
+.total{
+    box-shadow: 3px 3px 60px grey;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 60px;
+   
+}
