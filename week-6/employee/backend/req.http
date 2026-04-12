@@ -1,0 +1,29 @@
+###create employee
+POST http://localhost:8074/employee-api/employees
+Content-Type: application/json
+
+{
+    "name":"mahesh",
+    "email":"mahesh@gmail.com",
+    "mobile":"8074138272",
+    "designation":"student",
+    "companyName":"AU"
+}
+
+### read employees
+GET http://localhost:8074/employee-api/employees
+
+###update emp
+PUT http://localhost:8074/employee-api/employees/69ca273e2b5969b36c90f8b8
+Content-Type: application/json
+
+{
+    "name":"mahesh",
+    "email":"mahesh@gmail.com",
+    "mobile":"807413822",
+    "designation":"student",
+    "companyName":"AU"
+}
+
+###delete emp
+DELETE http://localhost:8074/employee-api/employees/69ca273e2b5969b36c90f8b8
