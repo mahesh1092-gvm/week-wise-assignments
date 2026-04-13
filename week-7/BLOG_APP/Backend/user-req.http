@@ -1,0 +1,48 @@
+
+###register for user
+POST http://localhost:8074/auth/users
+Content-Type: application/json
+
+{
+  "firstName":"user3",
+  "lastName":"",
+  "email":"user3@gmail.com",
+  "password":"user3",
+  "role":"USER",
+  "profileImageUrl":""
+  
+}
+
+###user login
+POST http://localhost:8074/auth/login
+Content-type: application/json
+
+{
+  "email":"user2@gmail.com",
+  "password":"user2"
+}
+
+###user logout
+GET http://localhost:8074/auth/logout
+
+###read articles of all authors
+GET http://localhost:8074/user-api/articles
+
+### add comment by user to add comment to article
+PUT http://localhost:8074/user-api/articles
+Content-Type: application/json
+
+{
+  "articleId":"",
+  "comment":""
+}
+
+
+### change password
+PUT http://localhost:8074/auth/password
+Content-Type: application/json
+
+{
+  "currentPassword":"user1",
+  "newPassword":"user11"
+}

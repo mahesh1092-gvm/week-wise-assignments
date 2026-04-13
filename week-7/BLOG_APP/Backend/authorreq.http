@@ -1,0 +1,60 @@
+###register for author
+POST http://localhost:8074/auth/users
+Content-Type: application/json
+
+{
+  "firstName":"author2",
+  "lastName":"",
+  "email":"author2@gmail.com",
+  "password":"author2",
+  "role":"AUTHOR",
+  "profileImageUrl":""
+  
+}
+
+### author login 
+POST http://localhost:8074/auth/login
+Content-Type: application/json
+
+{
+   "email":"author1@gmail.com",
+  "password":"author1"  
+}
+
+###logout
+GET http://localhost:8074/auth/logout
+
+### create new article
+POST http://localhost:8074/author-api/article
+Content-Type: application/json
+
+{
+    "author":"69be8587d776475988b64c7d",
+    "title":"written by a1",
+    "category":"aDS",
+    "content":"it is aDS"
+}
+
+### read own articles
+GET http://localhost:8074/author-api/articles
+
+
+###update article by author
+PUT http://localhost:8074/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b434c9f55318564408413f",
+    "title":"written by a1",
+    "category":"DS",
+    "content":"it is DS updated version"
+}
+
+### delete / restore an article(soft delete)
+PATCH http://localhost:8074/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b437611ed66b015ef8fb91",
+    "isArticleActive":true 
+}

@@ -1,0 +1,30 @@
+##admin login
+POST http://localhost:8074/auth/login
+Content-Type: application/json
+
+{
+   "email":"admin1@gmail.com",
+  "password":"admin1"  
+}
+
+###read all users and authors (not personal information)
+
+GET http://localhost:8074/admin-api/usersAuthors
+
+###block or activate user or author
+
+PATCH http://localhost:8074/admin-api/block
+
+###register for admin
+POST http://localhost:8074/auth/users
+Content-Type: application/json
+
+{
+  "firstName":"admin1",
+  "lastName":"",
+  "email":"admin1@gmail.com",
+  "password":"admin1",
+  "role":"ADMIN",
+  "profileImageUrl":""
+  
+}
