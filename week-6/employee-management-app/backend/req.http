@@ -1,0 +1,29 @@
+### post user
+POST http://localhost:5432/employee-api/employee
+Content-Type: application/json
+
+{
+  "name":"sanjay",
+  "email":"sanju@123",
+  "mobile":8945561232,
+  "designation":"student",
+  "companyName":"Google"
+}
+
+###
+GET http://localhost:5432/employee-api/employee
+
+###
+PUT http://localhost:5432/employee-api/employee/69ca2a1411d8313adf20d612
+Content-Type: application/json
+
+{
+  "name":"sanjay ponaganti",
+  "email":"sanju@1234",
+  "mobile":789561230,
+  "designation":"teacher",
+  "companyName":"sunTek"
+}
+
+###Delete 
+DELETE http://localhost:5432/employee-api/employee/69ca286573c70c8ae4d974db

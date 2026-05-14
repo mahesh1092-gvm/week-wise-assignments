@@ -1,0 +1,34 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.top{
+  padding:40px;
+  background-color:rgb(186, 186, 186) ;
+}
+.top button{
+  border:none;
+  background-color: rgb(65, 65, 233);
+  color: white;
+  box-shadow: 0px 0px 2px black;
+  padding:5px;
+  align-items: center;
+  border-radius: 5px;
+}
+main{
+  display:flex;
+  padding:5px;
+  margin:auto;
+  margin:50px;
+  gap:10px;
+}
+main button{
+  border:none;
+  padding:5px;
+  border-radius: 5px;
+  background-color:rgb(186, 186, 186) ;
+}
+.bottom{
+  margin:50px;
+}
