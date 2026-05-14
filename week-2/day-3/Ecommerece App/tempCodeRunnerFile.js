@@ -1,0 +1,1 @@
+{ id: 1, name: 'Laptop', price: 50000, stock: 10, category: 'electronics' },

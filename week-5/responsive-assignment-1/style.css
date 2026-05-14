@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+box-sizing: border-box;
+}
+h1{
+  margin: auto;
+  text-align:left;
+  background-color: white;
+  color:red;
+}
+
+p .top{
+  max-width: 500px;
+}
+h1 .top{
+  background-color: red;
+}
+.topup{
+  display:flex;
+}
+main{
+  background-color: red;
+  margin:auto;
+
+}
+.sections{
+  justify-content: space-between;
+  display:flex;
+  gap:10px;
+  margin:auto;
+
+}
+section{
+  background-color: brown;
+}
+.downstate{
+  color:white;
+  background-color: red;
+}

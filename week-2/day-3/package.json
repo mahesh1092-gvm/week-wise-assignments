@@ -1,0 +1,10 @@
+{
+  "name": "week-2-day-3",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "ecommerce": "node \"./Ecommerece App/app.js\"",
+    "tasks": "node \"./modules_01/app.js\""
+  }
+}
+

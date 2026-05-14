@@ -1,0 +1,93 @@
+//since we have both server and ________ in same origin or same domain server
+// automatically sends token for each request so no need to me55ntion cookie always
+
+### created a variable for cookie-token
+@cookieToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbmpheUAxMjMiLCJpYXQiOjE3NzQxMDM5NjIsImV4cCI6MTc3NDEwNTk2Mn0.-aVr2NY4BJkxqqiCqajdWPByDTmo20Qegc-kVC20cTk;
+
+### read all users
+GET http://localhost:2005/user-api/users
+Cookie: token={{cookieToken}}
+
+
+### read users by id
+GET http://localhost:2005/user-api/user
+Cookie: token={{cookieToken}}
+
+###
+POST http://localhost:2005/user-api/users
+Content-Type: application/json
+
+{
+  "username":"sanjay",
+  "password":"sanjay",
+  "email":"sanjay@123",
+  "age":20
+}
+
+
+### to log in
+POST http://localhost:2005/user-api/auth
+Content-Type: application/json
+
+{
+  "email":"sanjay@123",
+  "password":"sanjay"
+}
+
+###
+PUT http://localhost:2005/user-api/users/69abc74a6a79ee05839974e1
+Content-Type: application/json
+
+{
+  "username":"sanjay",
+  "password":"sanjayPonaganti",
+  "email":"sanju@123",
+  "age":20
+}
+###
+DELETE http://localhost:2005/user-api/users/69aaa4214b9beaed97a56169
+Cookie: token={{cookieToken}}
+//get and delete request donot pass data -> no body . so that these two requests can send data through end point
+//post request and put request should send data to the api as body of the request object.
+
+
+### add product to user cart
+PUT http://localhost:2005/user-api/cart/product-id/69b26014bac772589c179fa6
+
+
+###read all products
+GET http://localhost:2005/product-api/products
+Cookie: token={{cookieToken}}
+
+### read product by id 
+GET http://localhost:2005/product-api/products/69b132b579f4e14aee2c4617
+Cookie: token={{cookieToken}}
+
+###create a product
+POST http://localhost:2005/product-api/products
+Cookie: token={{cookieToken}}
+Content-Type: application/json
+
+{
+  "productId":"102",
+  "productName":"mobile",
+  "price":20000,
+  "brand":"iqoo"
+}
+
+###update product by id
+PUT http://localhost:2005/product-api/products/69b13e683502e86a3e5f301f
+Cookie: token={{cookieToken}}
+Content-Type: application/json
+
+{
+  "productId":"101",
+  "productName":"airpods",
+  "price":5500,
+  "brand":"apple"
+}
+
+
+###delete product by id
+DELETE http://localhost:2005/product-api/products/69b13e683502e86a3e5f301f
+Cookie: token={{cookieToken}}
