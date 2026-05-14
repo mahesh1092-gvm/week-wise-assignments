@@ -65,7 +65,7 @@ export default function ListOfEmployees() {
 
   return (
     <div className="text-center p-5">
-      <h1 className="text-4xl font-bold p-5">List of Employees</h1>
+      <h1 className="text-4xl font-bold p-5"> Employees List</h1>
 
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {emps.map((empObj) => (
@@ -75,7 +75,7 @@ export default function ListOfEmployees() {
           >
             <h2 className="text-2xl font-bold">{empObj.name}</h2>
 
-            <p className="text-gray-600 mt-2">{empObj.email}</p>
+            <p className="text-blue-600 mt-2">{empObj.email}</p>
 
             <div className="flex justify-around mt-5">
               <button

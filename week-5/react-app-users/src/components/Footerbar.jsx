@@ -3,12 +3,12 @@ function Footerbar(){
     return(
         <div className="flex justify-around bg-gray-700 p-10 text-amber-50">
             <ul>
-                <li>Hyderabad</li>
+                <li>India</li>
                 <li>Telangana</li>
             </ul>
             <ul>
-                <li>mail@mail.com</li>
-                <li>+91 9895586232</li>
+                <li>mahesh@mail.com</li>
+                <li>+91 8074138272</li>
             </ul>
 
         </div>

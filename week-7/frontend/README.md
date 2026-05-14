@@ -1,16 +1,66 @@
-# React + Vite
+--Frontend readme..
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+we use react for UI framework
+React Router – Navigation between pages
+Axios / Fetch API – HTTP requests to backend
+TailwindCSS / CSS Modules – Styling (customizable)
 
-Currently, two official plugins are available:
+Zustand..when the application size is huge , then maintainance of multiple context will become an issue..for such large applications advamced state management tools like Redux or Zustand is used
+we use Zustand React that uses hooks instead of complex boilerplate.
+react install
+first create the react project like--> npm create vite@latest my-react-app
+press y...represents current folder
+select react 
+javascript
+yes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+react-dom
+Provides DOM-specific methods to render React components into the browser.
 
-## React Compiler
+react-hook-form
+Lightweight library for handling forms in React using hooks (useForm).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+react-router
+Enables navigation and routing between pages in a React app (/home, /articles, /login).
+tailwindcss used for styling...without it we need to custom css for every singlr style
 
-## Expanding the ESLint configuration
+component is a building block..we created some components ....
+--AuthorArticles.jsx  
+it displays all articles written by a specific author
+Helps authors manage and view their published contents
+--AuthorProfile.jsx  
+here it shows author details like name, bio, and profile image
+Provides readers context about the author behind the articles
+--EditArticle.jsx  
+Allows authors to edit existing articles (title, content, ,category)
+Ensures content can be updated or corrected after publishing
+--Footer.jsx  
+Provides site-wide footer with links or copyright info. and Maintains consistent layout across all pages.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+--Header.jsx  
+here it can has Top navigation bar with branding and menu options.
+--Home.jsx  
+Landing page showing featured or latest articles.
+Acts as the entry point for readers exploring the blog.
+
+--Login.jsx  
+Form for users to log in with email and password. and alsoHandles authentication and sets user session.
+--ProtectedRoute.jsx  
+Restricts access to certain routes based on authentication/role.
+Redirects unauthorized users to login or unauthorized page.
+--Register.jsx  
+Form for new users to sign up with required details.
+Validates inputs and creates a new account in the system.
+--RootLayout.jsx  
+Defines the main layout structure (Header, Footer, Outlet).
+Ensures consistent design across all pages.
+--Unauthorized.jsx  
+Page shown when a user tries to access restricted content. gives improve UX by clearly explaining lack of permissions.
+--UserProfile.jsx  
+Displays user details like name, email, and role. also allows users to view or edit their personal information.
+--WriteArticles.jsx
+it is like a Form for authors to create and publish new articles.
+
+make sure to import tailwindcss in vite.config.js
+--app.jsx is
+it is like an in a React App.jsx is the root component that acts as the entry point for your application’s UI.

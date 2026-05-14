@@ -1,7 +1,7 @@
 function Navbar(){
 
     return(
-        <div className="flex justify-between p-5 bg-gray-400 text-amber-50 ">
+        <div className="flex justify-between p-5 bg-grey-200 text-amber-50 ">
             <h1>LOGO</h1>
             <ul className="flex gap-7 ">
                 <li><a href="">Home</a></li>

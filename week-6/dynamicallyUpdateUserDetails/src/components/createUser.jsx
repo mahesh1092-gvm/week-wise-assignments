@@ -64,7 +64,7 @@ function CreateUserForm() {
             className="border w-full p-3"
           />
         </div>
-        <button className="bg-pink-400 block mx-auto p-5 shadow-2xl rounded-2xl">
+        <button className="bg-blue-500 block mx-auto p-5 shadow-2xl rounded-2xl">
           Add User
         </button>
       </form>

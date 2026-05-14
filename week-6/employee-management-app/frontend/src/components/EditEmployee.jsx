@@ -78,7 +78,7 @@ export default function EditEmployee() {
           {...register("companyName")}
           className="mb-3 border p-3 w-full rounded-3xl"
         />
-        <button className="p-3  rounded-3xl text-center block m-auto bg-gray-700 text-amber-50">
+        <button className="p-3  rounded-3xl text-center block m-auto bg-blue-200 text-amber-50">
           Update Employee
         </button>
       </form>

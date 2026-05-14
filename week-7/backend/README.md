@@ -1,126 +1,39 @@
-1. Generate package.json
-2. Create .env file
-3. Create express app & assign port number
-4. Connect to db
-5. Define schemas and create Models
-    - UserTypeSchema
-        firstName
-        lastName
-        email(unique)
-        password
-        role
-        profileImageUrl
-        isUserActive
+Blog App backend
+---APIs--
+i. user API
+in user API add read artiicles and add comment to the article
+use verify token to make sure it is user or not
+ii. common APi
+some common APIs like register, login,logout, so that every user and author perform same operations
+iii. Author API
+create Apis like to write a article, read their own articles, make changes [edit] the articles, soft delete the article(not permanent delete)
+iv. Admin API
+here the admin can block the articles , activate the articles, block users and activate...
 
+---Config---
+here we use cloudinary to store the images 
+we use multer to get the files, images in forms
 
-    - ArticleSchema
-        author
-        title
-        category
-        content
-        comments
-        isArticleActive
+--middlewares--
+we use verify token.To know
+Authentication: Confirms that the user is logged in by checking  a valid JWT token exists.
+provides..Security: Prevents unauthorized users from reading, editing, or deleting sensitive data.
+so that we no need to No way to check if a token is valid or expired 
 
+--models--
+i. Article model
+createthe commentSchema that defines each comment with a required user reference and text.
+The articleSchema consists of articles with author, title, category, content etc... and an array of  comments,
+Finally, ArticleModel is created from the schema by taking giving  a Mongoose model
+ii. user model
+The userSchema defines user details like name, email (unique), password, role (USER, AUTHOR, ADMIN), profile image
+It enforces validation rules (required fields, unique email, role restrictions)
 
-6. Implement APIs
-7. Create common api for register, login and logout
+.env
+here it store port number,database url and also the secret key.....
+.env helps for the security
 
-
-
-
-
-
-### Frontend
-    Dynamic, Responsive User Interfaces(UI== web page--->Browser)
-                               HTML
-                  CSS(styles & Responsiveness)  , Bootstrap, TailwindCSS    
-    JavaScript
-    ReactJS/Angular/Vue/NextJS        
-
-
-
-# STORING FILES IN MERN APP
-
-    Client                              Backend
-    --------------------------------------------
-    JSON                                req.body(exp.json()->body parser )  ---> DB
-    Binary data(File)                   req.file ( multer ) ---> DB (X)
-
-                                        3rd party cloud(AWS, Cloudinary)
-                                            |
-                                            CDN link of the file
-                                            |
-                                            Store in DB
-
-
-- Install cloudinary & multer
-        npm install cloudinary multer
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-cloudinary.js
--------------
-import { v2 as cloudinary } from "cloudinary";
-
-cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.API_KEY,
-  api_secret: process.env.API_SECRET,
-});
-
-export default cloudinary;
-
-
-
-
-cloudinaryUpload.js
--------------------
-import cloudinary from "./cloudinary.js";
-
-export const uploadToCloudinary = (buffer) => {
-  return new Promise((resolve, reject) => {
-    const stream = cloudinary.uploader.upload_stream({ folder: "blog_users" }, (err, result) => {
-      if (err) return reject(err);
-      resolve(result);
-    });
-    stream.end(buffer);
-  });
-};
-
-
-
-multer.js
----------
-import multer from "multer";
-
-export const upload = multer({
-  storage: multer.memoryStorage(),
-  //to avoid RAM overflow
-  limits: {
-    fileSize: 2 * 1024 * 1024, // 2MB
-  },
-  //for security validation
-  fileFilter: (req, file, cb) => {
-    if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
-      cb(null, true);
-    } else {
-      const err = new Error("Only JPG and PNG allowed");
-      err.status = 400;
-      cb(err, false);
-    }
-  },
-});
+server
+first create an Express server,  also enables CORS for specific frontend backend communiation, uses cookie-parser for handling cookies, and express.json() for parsing JSON request 
+next Connect to MongoDB using Mongoose with process.env.DB_URL, and starts the server on the configured port.
+Now use some Error Handling: Includes middleware for invalid paths (404) and detailed error handling for validation errors, cast errors, and duplicate key errors.....

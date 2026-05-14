@@ -1,6 +1,6 @@
 import exp from "express";
 import { employeeModel } from "./models/employeeModel.js";
-import { employeeApp } from "./Api's/employeeApi.js";
+import { employeeApp } from "./APIs/employeeApi.js";
 import { connect } from "mongoose";
 import cors from "cors";
 const app = exp();

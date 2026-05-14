@@ -29,17 +29,19 @@ app.use("/auth", commonApp);
 //connect to db
 const connectDB = async () => {
   try {
-    await connect(process.env.DB_URL);
-    console.log("DB server connected");
-    //assign port
+    await connect(process.env.DB_URL);  // no extra options needed
+    console.log(" DB server connected");
+
     const port = process.env.PORT || 5000;
-    app.listen(port, () => console.log(`server listening on ${port}..`));
+    app.listen(port, () => console.log(` Server listening on ${port}..`));
   } catch (err) {
-    console.log("err in db connect", err);
+    console.error(" err in db connect:", err.message);
+    process.exit(1);
   }
 };
 
 connectDB();
+
 
 //to handle invalid path
 app.use((req, res, next) => {

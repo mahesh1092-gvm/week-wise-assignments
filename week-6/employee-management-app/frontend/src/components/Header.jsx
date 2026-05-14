@@ -3,7 +3,7 @@ import { NavLink } from "react-router";
 export default function Header() {
   return (
     <div className="">
-      <nav className="bg-gray-500 flex p-5 gap-5 items-center  justify-end">
+      <nav className="bg-yellow-200-500 flex p-5 gap-5 items-center  justify-end">
         <NavLink
           to=""
           className={({ isActive }) =>

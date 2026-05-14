@@ -1,0 +1,21 @@
+div{
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    padding: 80px;
+  
+}
+img{
+    display: block;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+body{
+    background-color: pink
+}
+hr{
+    border-color: green
+}

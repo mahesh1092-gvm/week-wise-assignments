@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 const app = exp();
 
 //start server
-app.listen(2005, () => console.log("server on port 2005..."));
+app.listen(8074, () => console.log("server on port 8074..."));
 app.use(exp.json());
 
 //add cookie parse middleware
@@ -18,7 +18,7 @@ app.use("/product-api", productApp);
 //async and await
 async function connectDB() {
   try {
-    await connect("mongodb://localhost:27017/mydata");
+    await connect("mongodb://localhost:27017/DataBase");
     console.log("db connecion successfull");
   } catch (err) {
     console.log("errr in the db connection: ", err);

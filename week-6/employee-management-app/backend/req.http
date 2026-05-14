@@ -3,11 +3,11 @@ POST http://localhost:5432/employee-api/employee
 Content-Type: application/json
 
 {
-  "name":"sanjay",
-  "email":"sanju@123",
-  "mobile":8945561232,
+  "name":"mahesh",
+  "email":"mahi@123",
+  "mobile":9632014587,
   "designation":"student",
-  "companyName":"Google"
+  "companyName":"AU"
 }
 
 ###
@@ -18,11 +18,11 @@ PUT http://localhost:5432/employee-api/employee/69ca2a1411d8313adf20d612
 Content-Type: application/json
 
 {
-  "name":"sanjay ponaganti",
-  "email":"sanju@1234",
-  "mobile":789561230,
-  "designation":"teacher",
-  "companyName":"sunTek"
+  "name":"mahesh",
+  "email":"mahi@1234",
+  "mobile":9632014587,
+  "designation":"attender",
+  "companyName":"Maharshi"
 }
 
 ###Delete 

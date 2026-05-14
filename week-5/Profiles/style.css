@@ -1,0 +1,37 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+img{
+  width:100px;
+  border-radius: 50;
+}
+table,tr,th,td{
+  padding:10px;
+  text-align:center;
+  border-collapse: collapse;
+}
+h1{
+  text-align:center;
+  margin:auto;
+  margin-top:50px;
+  background-color: rgb(56, 88, 88);
+}
+th{
+  background-color: rgb(40, 67, 67);
+}
+.odd{
+  background-color: rgb(207, 228, 221);
+}
+.even{
+  background-color: rgba(165, 205, 45, 0.33);
+}
+.granpa{
+  border-radius:  0px;
+  box-shadow: 1px 1px 20px;
+  margin:50px;
+}
+body{
+  background-color: rgb(99, 93, 150);
+}

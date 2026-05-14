@@ -1,0 +1,40 @@
+*{
+  margin:0;
+  padding:0;
+box-sizing: border-box;
+}
+h1{
+  margin: auto;
+  text-align:left;
+  background-color: white;
+  color:rgb(176, 64, 64);
+}
+
+p .top{
+  max-width: 500px;
+}
+h1 .top{
+  background-color: rgb(212, 85, 85);
+}
+.topup{
+  display:flex;
+}
+main{
+  background-color: rgb(152, 62, 62);
+  margin:auto;
+
+}
+.sections{
+  justify-content: space-between;
+  display:flex;
+  gap:10px;
+  margin:auto;
+
+}
+section{
+  background-color: rgb(214, 73, 73);
+}
+.downstate{
+  color:white;
+  background-color: rgb(149, 69, 69);
+}
